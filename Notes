@@ -5,3 +5,9 @@
   may be worth a sanity check to see if this file exists prior to running init.
 * terraform validate and fmt to format
 * confirmed creation of ec2 instance, state file added to ignore.
+* init is required to import/source a module.
+
+
+# Some madness with configuration files and trying to use modules
+* Seems as though modules are much preferred though there is some mess to configuring.
+* Working on mvp for the cluster to begin and using default vpc etc.
