@@ -1,0 +1,7 @@
+# Manual steps (script later)
+
+* terraform init
+* encountered odd .netrc issue with terraform cli, file was use for curl batch job, deleting resolved the issue
+  may be worth a sanity check to see if this file exists prior to running init.
+* terraform validate and fmt to format
+* confirmed creation of ec2 instance, state file added to ignore.
