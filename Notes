@@ -12,6 +12,22 @@
 * Seems as though modules are much preferred though there is some mess to configuring.
 * Working on mvp for the cluster to begin and using default vpc etc.
 
+# Todo:
+* update ECR repo name to be something sensible
+* Java webapp with endpoint open (python as quick and dirty fix)
+
+
+* madness with json and tempaltes for the task def
+Error: ECS Task Definition container_definitions is invalid: Error decoding JSON: invalid character 'e' in literal true (expecting 'r')
+on main.tf line 154, in resource "aws_ecs_task_definition" "app_service_td":
+154:   container_definitions    = data.template_file.hello-app.rendered
+
+Error: Error in function call
+on main.tf line 155, in resource "aws_ecs_task_definition" "app_service_td":
+155:   container_definitions    = file("test.json")
+
+* ecr get login --no email is deprecated :(
+Steves-MBP Terraform % aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 322244822111.dkr.ecr.us-east-1.amazonaws.com
 
 
 vpc id: vpc-3e6abe44
